@@ -1,4 +1,4 @@
-{% set version = '3.0.2' %}
+{% set version = "3.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Gmisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Gmisc/Gmisc_{{ version }}.tar.gz
-  sha256: 12a6f76c6e3ba71dcf220dd8f81eb39cfb63b4798f6b3789581c7f6d896271d0
+  sha256: 83e0f8ab93eedb48e280a786106474dd2ce1dc2df6505835ec4218521e9e0fe9
 
 build:
-  merge_build_host: True               # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -79,11 +79,8 @@ test:
 about:
   home: https://gforge.se
   license: GPL-3.0-or-later
-  summary: "Tools for making the descriptive \"Table 1\" used in medical articles, a transition
-    plot for showing changes between categories (also known as a Sankey diagram), flow
-    charts by extending the grid package, a method for variable selection based on the
-    SVD, B\xE9zier lines with arrows complementing the ones in the 'grid' package, and
-    more."
+  summary: "Tools for making the descriptive \"Table 1\" used in medical articles, a transition plot for showing changes between categories (also known as a Sankey diagram), flow charts by extending the grid package, a method for variable selection based on the SVD, Bézier lines with arrows complementing the ones in the
+    'grid' package, and more."
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
