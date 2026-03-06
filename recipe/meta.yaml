@@ -1,4 +1,4 @@
-{% set version = "3.1.0" %}
+{% set version = "3.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Gmisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Gmisc/Gmisc_{{ version }}.tar.gz
-  sha256: 4ead388af4bf3dbc8f634f20646f270af5b25b55bdb8493af6c767e1b5f2de82
+  sha256: c8beb72f5e76363197ae90282e9baea6be50e08f1be353f62a7de92604c7b9ae
 
 build:
   number: 0
